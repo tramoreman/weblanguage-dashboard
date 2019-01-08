@@ -29,3 +29,13 @@ queue()
             .transitionDuration(1800)
             .dimension(surveysection_dim)
             .group(web_design_languages);
+            
+            var section_dim = ndx.dimension(dc.pluck('section'));
+        var web_design_languages = section_dim.group().reduceSum(dc.pluck('total'));
+      
+        dc.pieChart('#three')
+           .height(200)
+            .radius(200)
+            .transitionDuration(1500)
+            .dimension(section_dim)
+            .group(web_design_languages);
