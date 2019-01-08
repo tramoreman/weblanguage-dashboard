@@ -18,3 +18,14 @@ queue()
             .x(d3.scale.ordinal())
             .xUnits(dc.units.ordinal)
             .yAxis().ticks(4);
+            
+             var surveysection_dim = ndx.dimension(dc.pluck('surveysection'));
+        var web_design_languages = surveysection_dim.group().reduceSum(dc.pluck('total'));
+        
+        dc.pieChart('#two')
+            .height(200)
+            .radius(200)
+            
+            .transitionDuration(1800)
+            .dimension(surveysection_dim)
+            .group(web_design_languages);
