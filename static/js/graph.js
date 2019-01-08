@@ -48,3 +48,12 @@ queue()
             .transitionDuration(1500)
             .dimension(survey_dim)
             .group(web_design_languages);
+            
+              var year_dim = ndx.dimension(dc.pluck('year'));
+        var web_design_languages = year_dim.group().reduceSum(dc.pluck('total'));
+        dc.pieChart('#five')
+           .height(200)
+            .radius(200)
+            .transitionDuration(1500)
+            .dimension(year_dim)
+            .group(web_design_languages);
