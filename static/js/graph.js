@@ -57,3 +57,6 @@ queue()
             .transitionDuration(1500)
             .dimension(year_dim)
             .group(web_design_languages);
+            
+               dc.renderAll();
+    }
