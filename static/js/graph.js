@@ -39,3 +39,12 @@ queue()
             .transitionDuration(1500)
             .dimension(section_dim)
             .group(web_design_languages);
+            
+             var survey_dim = ndx.dimension(dc.pluck('survey'));
+        var web_design_languages = survey_dim.group().reduceSum(dc.pluck('total'));
+        dc.pieChart('#four')
+            .height(200)
+            .radius(200)
+            .transitionDuration(1500)
+            .dimension(survey_dim)
+            .group(web_design_languages);
