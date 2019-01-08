@@ -61,3 +61,17 @@ padding-right:60px;
 padding-left:60px;
 
 }
+
+.keen-dashboard .chart-wrapper .chart-notes {
+    background: #fbfbfb;
+    border-top: 1px solid #e2e2e2;
+    color: #808080;
+    font-size: 12px;
+    padding: 8px 10px 5px;}
+	
+	.keen-dashboard .chart-wrapper {
+    background: #fff;
+    border: 1px solid #e2e2e2;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
