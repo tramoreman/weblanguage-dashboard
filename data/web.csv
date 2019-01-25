@@ -26,7 +26,7 @@ postgresql,1996,databases,databases,stackoverflow,2018,218
 postgresql,1996,databases,databases,stackoverflow,2017,780
 postgresql,1996,databases,databases,indeed,2018,496
 python,1989,popular,backend,stackoverflow,2018,303
-python, 1989,popular,backend,stackoverflow,2017,117
+python,1989,popular,backend,stackoverflow,2017,117
 python,1989,popular,backend,stackoverflow,2015,523
 python,1989,popular,backend,stackoverflow,2016,122
 python,1989,popular,backend,stackoverflow,2018,303
@@ -45,7 +45,7 @@ sql,1973,popular,databases,indeed,2018,100
 sql,1973,databases,databases,indeed,2018,100
 sqlserver,1989,databases,databases,stackoverflow,2018,273
 sqlserver,1989,databases,databases,stackoverflow,2017,113
-sqlserver,1989,djmatabases,databases,indeed,2018,348
+sqlserver,1989,databases,databases,indeed,2018,348
 php,1994,popular,backend,stackoverflow,2018,240
 php,1994,popular,backend,stackoverflow,2015,652
 php,1994,popular,backend,stackoverflow,2016,127
