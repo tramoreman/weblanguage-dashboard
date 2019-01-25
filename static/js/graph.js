@@ -1,13 +1,16 @@
 queue()
-        .defer(d3.csv, "web.csv")
+        .defer(d3.csv, "/data/web.csv")
       
         .await(makeGraphs);
     function makeGraphs(error, transactionsData) {
         
-         var ndx = crossfilter(transactionsData);
+        var ndx = crossfilter(transactionsData);
         var language_dim = ndx.dimension(dc.pluck('language'));
         var web_design_languages = language_dim.group().reduceSum(dc.pluck('total'));
         
+         var ndx = crossfilter(transactionsData);
+        var language_dim = ndx.dimension(dc.pluck('language'));
+        var web_design_languages = language_dim.group().reduceSum(dc.pluck('total'));
         dc.barChart("#one")
             .width(1200)
             .height(300)
@@ -18,8 +21,9 @@ queue()
             .x(d3.scale.ordinal())
             .xUnits(dc.units.ordinal)
             .yAxis().ticks(4);
-            
-             var surveysection_dim = ndx.dimension(dc.pluck('surveysection'));
+      
+       
+        var surveysection_dim = ndx.dimension(dc.pluck('surveysection'));
         var web_design_languages = surveysection_dim.group().reduceSum(dc.pluck('total'));
         
         dc.pieChart('#two')
@@ -30,7 +34,7 @@ queue()
             .dimension(surveysection_dim)
             .group(web_design_languages);
             
-            var section_dim = ndx.dimension(dc.pluck('section'));
+             var section_dim = ndx.dimension(dc.pluck('section'));
         var web_design_languages = section_dim.group().reduceSum(dc.pluck('total'));
       
         dc.pieChart('#three')
@@ -39,8 +43,8 @@ queue()
             .transitionDuration(1500)
             .dimension(section_dim)
             .group(web_design_languages);
-            
-             var survey_dim = ndx.dimension(dc.pluck('survey'));
+       
+        var survey_dim = ndx.dimension(dc.pluck('survey'));
         var web_design_languages = survey_dim.group().reduceSum(dc.pluck('total'));
         dc.pieChart('#four')
             .height(200)
@@ -49,7 +53,7 @@ queue()
             .dimension(survey_dim)
             .group(web_design_languages);
             
-              var year_dim = ndx.dimension(dc.pluck('year'));
+             var year_dim = ndx.dimension(dc.pluck('year'));
         var web_design_languages = year_dim.group().reduceSum(dc.pluck('total'));
         dc.pieChart('#five')
            .height(200)
@@ -58,5 +62,5 @@ queue()
             .dimension(year_dim)
             .group(web_design_languages);
             
-               dc.renderAll();
+        dc.renderAll();
     }
