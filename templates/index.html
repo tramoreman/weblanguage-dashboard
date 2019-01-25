@@ -51,7 +51,7 @@
   
   <!-- Dashboard -->
   
-   <body class="keen-dashboard" style="padding-top: 80px;">
+ <body class="keen-dashboard" style="padding-top: 80px;">
 
   <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
@@ -61,7 +61,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand">Web Dashboard</a><a class="btn btn-large btn-danger btn-lg" href="javascript:void(0);" onclick="javascript:startTour();">Website Tour</a>
+      <a class="navbar-brand">Web Dashboard</a><a class="btn btn-large btn-danger btn-lg" href="javascript:void(0);" onclick="javascript:introJs().setOption('showProgress', true).start();">Website Tour</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
@@ -69,12 +69,12 @@
     </div>
   </div>
 </nav>
- 
+  
   <div class="container-fluid">
     <div class="row" >
       <div class="col-sm-6 col-md-12">
         <div class="chart-wrapper">
-          <div class="chart-title" data-step="3" data-intro="More features, more">
+          <div class="chart-title" data-step="1" data-intro="bar chart with total languages surveyed">
             Web Design Languages
           </div>
           <div class="chart-stage">
@@ -90,7 +90,7 @@
  <div class="row">
       <div class=" col-md-3">
         <div class="chart-wrapper">
-          <div class="chart-title">
+          <div class="chart-title" data-step="2" data-intro="survey section indeed" >
             Survey Section
           </div>
           <div class="chart-stage">
@@ -102,7 +102,7 @@
       
        <div class="col-md-3">
         <div class="chart-wrapper">
-          <div class="chart-title">
+          <div class="chart-title" data-step="3" data-intro="survey section github">
             Section
           </div>
           <div class="chart-stage">
@@ -114,7 +114,7 @@
      
          <div class="col-md-3">
         <div class="chart-wrapper">
-          <div class="chart-title">
+          <div class="chart-title" data-step="4" data-intro="survey by group">
             Survey By Group
           </div>
           <div class="chart-stage">
@@ -127,7 +127,7 @@
        
          <div class="col-md-3">
         <div class="chart-wrapper">
-          <div class="chart-title">
+          <div class="chart-title" data-step="5" data-intro="survey by year">
             Survey by Year
           </div>
           <div class="chart-stage">
@@ -146,3 +146,4 @@
   
 </body>
 </html>
+
